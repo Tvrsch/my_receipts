@@ -1,6 +1,6 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="MailHog" type="ShConfigurationType">
-    <option name="SCRIPT_TEXT" value="MailHog.exe" />
+    <option name="SCRIPT_TEXT" value="start http://127.0.0.1:8025 &amp;&amp; MailHog.exe" />
     <option name="INDEPENDENT_SCRIPT_PATH" value="true" />
     <option name="SCRIPT_PATH" value="" />
     <option name="SCRIPT_OPTIONS" value="" />
