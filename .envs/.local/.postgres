@@ -1,0 +1,7 @@
+# PostgreSQL
+# ------------------------------------------------------------------------------
+POSTGRES_HOST=postgres
+POSTGRES_PORT=5432
+POSTGRES_DB=my_receipts
+POSTGRES_USER=qLrWTaHPUthjvHEitdQokWvLiIpBaBYJ
+POSTGRES_PASSWORD=AMwwJWKu5jOuuCkrxYAMIxmLNiKHByxE2BbkqVT56wGdFk6Bx6MQ9zg8BcFfghMF
