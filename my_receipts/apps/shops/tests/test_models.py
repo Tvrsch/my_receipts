@@ -30,3 +30,9 @@ def test_shop_strip_name_and_address():
     with pytest.raises(IntegrityError):
         with transaction.atomic():
             baker.make(MODEL, name=f"  {lenta.name}  ", address="  ")
+
+
+def test_shop_str():
+    name = 'ООО "Лента"'
+    lenta = baker.make(MODEL, name=name)
+    assert str(lenta) == name
