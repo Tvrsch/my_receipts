@@ -2,7 +2,7 @@
 Module for all Form Tests.
 """
 import pytest
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 
 from my_receipts.users.forms import UserCreationForm
 from my_receipts.users.models import User
