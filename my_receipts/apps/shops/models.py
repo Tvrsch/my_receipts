@@ -10,10 +10,15 @@ class Shop(models.Model):
         unique_together = ("name", "address")
         index_together = ("name", "address")
 
-    name = models.CharField(_("Name"), max_length=255, unique=True)
+    name = models.CharField(_("Name"), max_length=255)
     address = models.TextField(_("Address"), blank=True)
     itn = models.PositiveBigIntegerField(_("Individual Taxpayer Number"), default=0)
     url = models.URLField(_("Url"), blank=True)
 
     def __str__(self):
         return self.name
+
+    def save(self, *args, **kwargs):
+        self.name = self.name.strip()
+        self.address = self.address.strip()
+        super(Shop, self).save(*args, **kwargs)
