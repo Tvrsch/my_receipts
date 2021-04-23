@@ -72,7 +72,7 @@ THIRD_PARTY_APPS = [
 ]
 
 LOCAL_APPS = [
-    "my_receipts.users.apps.UsersConfig",
+    "my_receipts.apps.users.apps.UsersConfig",
     # Your stuff: custom apps go here
 ]
 # https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
@@ -284,9 +284,9 @@ ACCOUNT_EMAIL_REQUIRED = True
 # https://django-allauth.readthedocs.io/en/latest/configuration.html
 ACCOUNT_EMAIL_VERIFICATION = "mandatory"
 # https://django-allauth.readthedocs.io/en/latest/configuration.html
-ACCOUNT_ADAPTER = "my_receipts.users.adapters.AccountAdapter"
+ACCOUNT_ADAPTER = "my_receipts.apps.users.adapters.AccountAdapter"
 # https://django-allauth.readthedocs.io/en/latest/configuration.html
-SOCIALACCOUNT_ADAPTER = "my_receipts.users.adapters.SocialAccountAdapter"
+SOCIALACCOUNT_ADAPTER = "my_receipts.apps.users.adapters.SocialAccountAdapter"
 
 
 # Your stuff...

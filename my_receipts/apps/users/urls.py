@@ -1,6 +1,6 @@
 from django.urls import path
 
-from my_receipts.users.views import (
+from my_receipts.apps.users.views import (
     user_detail_view,
     user_redirect_view,
     user_update_view,

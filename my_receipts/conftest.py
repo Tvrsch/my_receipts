@@ -1,7 +1,7 @@
 import pytest
 
-from my_receipts.users.models import User
-from my_receipts.users.tests.factories import UserFactory
+from my_receipts.apps.users.models import User
+from my_receipts.apps.users.tests.factories import UserFactory
 
 
 @pytest.fixture(autouse=True)

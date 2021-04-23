@@ -1,6 +1,6 @@
 import pytest
 
-from my_receipts.users.models import User
+from my_receipts.apps.users.models import User
 
 pytestmark = pytest.mark.django_db
 
