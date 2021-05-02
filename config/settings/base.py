@@ -74,6 +74,7 @@ THIRD_PARTY_APPS = [
 LOCAL_APPS = [
     "my_receipts.apps.users.apps.UsersConfig",
     "my_receipts.apps.shops.apps.ShopsConfig",
+    "my_receipts.apps.items.apps.ItemsConfig",
 ]
 # https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
