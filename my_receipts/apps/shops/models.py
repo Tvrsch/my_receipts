@@ -22,3 +22,7 @@ class Shop(models.Model):
         self.name = self.name.strip()
         self.address = self.address.strip()
         super(Shop, self).save(*args, **kwargs)
+
+    @property
+    def receipts_count(self):
+        return self.receipts.count()
