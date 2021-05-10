@@ -54,7 +54,7 @@ open htmlcov/index.html
 ### To generate coverage badge run:
 
 ```bash
-coverage-badge -o coverage.svg
+coverage-badge -o coverage.svg -f
 ```
 
 ### Running tests with pytest
