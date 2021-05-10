@@ -19,10 +19,10 @@ class HTMLParser:
     base_url = None
     bs_kwargs = {"features": "html.parser"}
 
-    _soup = None
-    _data = {}
-
     def __init__(self):
+        self._soup = None
+        self._data = {}
+
         if self.vendor is None:
             raise ValueError("'vendor' is empty")
 
