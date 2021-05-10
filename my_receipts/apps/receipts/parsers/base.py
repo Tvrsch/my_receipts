@@ -43,8 +43,8 @@ class HTMLParser:
         """Returns shop address"""
 
     @abstractmethod
-    def get_terminal_number(self) -> str:
-        """Returns cashier name"""
+    def get_terminal_number(self) -> int:
+        """Returns pos terminal number"""
 
     @abstractmethod
     def get_shift(self) -> int:

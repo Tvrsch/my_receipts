@@ -37,11 +37,11 @@ class TaxcomParser(HTMLParser):
         shop_address = self.soup.find("span", attrs={"class": "receipt-value-1009"})
         return shop_address.text.strip()
 
-    def get_terminal_number(self) -> str:
+    def get_terminal_number(self) -> int:
         terminal_number = self.soup.find(
             "span", attrs={"class": "receipt-value-1187"}
         ).find("span")
-        return terminal_number.text.strip()
+        return int(INT_REGEX.search(terminal_number.text).group())
 
     def get_shift(self) -> int:
         shift = self.soup.find("span", attrs={"class": "receipt-value-1038"})

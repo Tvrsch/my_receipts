@@ -1,0 +1,3809 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Сервис ОФД Такском для проверки кассовых чеков</title>
+        <meta name="description" content="Сервис ОФД Такском для проверки кассовых чеков онлайн: полная информация о каждом чеке онлайн-кассы. Сервис экспресс проверки кассового чека с 2017 года.">
+        <meta name="keywords" content="чек проверить чек через офд проверка чеков офд проверка чека офд сайт проверки чеков офд на сайте проверить чек онлайн сайт проверки чеков онлайн проверка чека на подлинность проверить чек">
+        <meta name="viewport" content="width=550, target-densitydpi=device-dpi, initial-scale=0.6, maximum-scale=1, user-scalable=yes">
+        <meta name="format-detection" content="telephone=no"/>
+        <meta name="robots" content="noindex,nofollow">
+        <link href="/Content/css/bundle_css?v=cs9Z0HsReLK9KerHHR7eWAVCAsibN13flV_0HYBXso81" rel="stylesheet"/>
+
+
+        <link href="/Content/css/fontface.css" rel="stylesheet">
+        <link href="/Content/css/font-awesome.min.css" rel="stylesheet">
+
+        <script src="/bundles/modernizr?v=inCVuEFe6J4Q07A0AcRsbJic_UE5MwpRMNGcOtk94TE1"></script>
+
+
+
+        <script src="/bundles/jquery?v=DilzeZuJxdbQsfc_JOwsWB4VFDhTPM73urYeggaKdL81"></script>
+
+
+        <script src="/bundles/bootstrap?v=mAh4n4EUASqwe-wXRUl25xePEOj1qJVYjV9v2bbVUJo1"></script>
+
+
+
+        <script src="/Scripts/JsBarcode.all.js"></script>
+    </head>
+    <body>
+        <!-- Yandex.Metrika counter -->
+        <script type="text/javascript">
+            (function (d, w, c) {
+                (w[c] = w[c] || []).push(function () {
+                    try {
+                        w.yaCounter49664989 = new Ya.Metrika2({
+                            id: 49664989,
+                            clickmap: true,
+                            trackLinks: true,
+                            accurateTrackBounce: true,
+                            webvisor: true
+                        });
+                    } catch (e) { }
+                });
+
+                var n = d.getElementsByTagName("script")[0],
+                    s = d.createElement("script"),
+                    f = function () { n.parentNode.insertBefore(s, n); };
+                s.type = "text/javascript";
+                s.async = true;
+                s.src = "https://mc.yandex.ru/metrika/tag.js";
+
+                if (w.opera == "[object Opera]") {
+                    d.addEventListener("DOMContentLoaded", f, false);
+                } else { f(); }
+            })(document, window, "yandex_metrika_callbacks2");
+        </script>
+        <noscript><div><img src="https://mc.yandex.ru/watch/49664989" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+        <!-- /Yandex.Metrika counter -->
+
+        <header class="header">
+            <div class="wrapper">
+                <div class="grid-container justify-container">
+                    <div class="justify-item" style="vertical-align: middle;">
+                        <a class="header-logo" href="/">
+                            <img src="/Content/images/logo-taxcom-check.png" width="36" height="48" alt="Такском Чек">
+                        </a>
+                        <div class="header-title">
+                            Такском Чек
+                        </div>
+                    </div>
+                    <div class="header-menu justify-item">
+                        <table>
+                            <tr>
+                                <td class="hidden-xs"><a href="http://fwlink.taxcom.ru/ShowContents.aspx?ContentId=301" id="about_receipt">Вопросы о чеке</a>&nbsp;&nbsp;&nbsp;</td>
+                                <td class="hidden-xs"><a href="http://fwlink.taxcom.ru/ShowContents.aspx?ContentId=300" id="about_serv">Как подключиться</a>&nbsp;&nbsp;&nbsp;</td>
+                                <td class="hidden-xs"><a href="http://fwlink.taxcom.ru/ShowContents.aspx?ContentId=299" id="become_a_partner">Как стать партнером</a>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+
+                                <td class="navbar-right">
+                                    <div class="navbar-header">
+                                        <div id="printButtonPDF" style="display: none">
+                                            <a href="/Reciept/Upload/00000000-0000-0000-0000-000000000000?FiscalSign=0000000000&amp;Summ=1196.00" target="_blank" class="btn btn-inverse print-btn">
+                                                                                    Печать
+                                                                                </a>
+                                        </div>
+                                    </div>
+                                </td>
+
+                                <td class="navbar-right">
+                                    <div class="navbar-header">
+                                        <button type="button" class="navbar-toggle button-menu" data-toggle="collapse" data-target="#alignment-example" aria-expanded="false">
+                                            <i class="fa fa-2x fa-bars" aria-hidden="true"></i>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="collapse navbar-collapse" id="alignment-example">
+                        <div class="text-left">
+                            <a type="button" class="btn btn-link button-nav hidden-sm hidden-md hidden-lg" href="http://fwlink.taxcom.ru/ShowContents.aspx?ContentId=301" style="margin-top: 2rem" id="about_receipt">Вопросы о чеке</a>
+                            <br>
+                            <a type="button" class="btn btn-link button-nav hidden-sm hidden-md hidden-lg" href="http://fwlink.taxcom.ru/ShowContents.aspx?ContentId=300" id="about_serv">Как подключиться</a>
+                            <br>
+                            <a type="button" class="btn btn-link button-nav hidden-sm hidden-md hidden-lg" href="http://fwlink.taxcom.ru/ShowContents.aspx?ContentId=299" id="become_a_partner">Как стать партнером</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="main">
+            <div class="wrapper">
+
+
+<style>
+    .invoice-box {
+        max-width: 510px;
+        margin: auto;
+        /*
+		padding: 30px;
+        border: 1px solid #eee;
+        box-shadow: 0 0 5px 2px rgba(0,0,0,.3);
+		*/
+        font-size: 18px;
+        line-height: 20px;
+        font-family: 'CourierNewPSMT', 'Courier New', monospace;
+        color: black;
+    }
+
+
+    .app-badge{
+        height: 50px;
+        margin: 10px;
+    }
+    .footer-message {
+        font-size: 22px !important;
+        margin: 10px;
+    }
+    .jumbotron-small-padding {
+        padding-top: 20px;
+    }
+
+    /*.invoice-box table {
+        width: 100%;
+        max-width: 470px;
+        line-height: inherit;
+        text-align: left;
+        table-layout: fixed;
+    }
+
+    .invoice-box table td {
+        vertical-align: top;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        word-break: break-all;
+        white-space: normal;
+    }
+
+    .invoice-box table tr td:nth-child(2) {
+        text-align: right;
+        white-space: nowrap;
+    }
+    .invoice-box table tr td:nth-child(3) {
+        text-align: right;
+        white-space: nowrap;
+    }
+    .invoice-box table tr.total {
+        font-size: 32px;
+    }
+    .invoice-box table tr.item {
+        word-spacing: -7px;
+    }
+    .invoice-box table tr.total td {
+        padding-top: 32px;
+        padding-bottom: 32px;
+    }*/
+
+</style>
+
+<div class="grid-container">
+    <div class="main-content">
+            <div class="jumbotron jumbotron-small-padding" >
+
+                <div class="container">
+
+
+
+
+                    <div class="invoice-box">
+
+
+
+
+
+
+<style>
+
+    .print-servissce-receipt a { color: #0069b3; }
+
+
+
+    .print-service-receipt {
+
+        border-left: solid 1px #d4dae6;
+
+        border-right: solid 1px #d4dae6;
+
+        border-top: solid 1px #d4dae6;
+
+        color: #45545e;
+
+        font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+
+        font-size: 14px;
+
+        font-stretch: normal;
+
+        font-style: normal;
+
+        font-weight: normal;
+
+        letter-spacing: normal;
+
+        /*background-color: #f0f3f5;*/
+
+
+
+        line-height: 0;
+
+        width: 508px;
+
+        overflow-wrap: break-word;
+
+    }
+
+
+
+    table.print-service-receipt {
+
+        border-spacing: 0;
+
+        -premailer-cellspacing: 0;
+
+        -premailer-cellpadding: 0;
+
+        border-collapse: separate;
+
+    }
+
+
+
+    .print-service-receipt table {
+
+        color: #45545e;
+
+        width: 100%;
+
+        min-width: 100%; /* gmail android */
+
+        border-spacing: 0;
+
+        -premailer-cellspacing: 0;
+
+        -premailer-cellpadding: 0;
+
+        -premailer-width: 100%;
+
+        border-collapse: separate;
+
+    }
+
+
+
+    .print-service-receipt table td {
+
+        padding: 0;
+
+    }
+
+    .receipt-row-1 {
+
+        clear: both;
+
+        text-align: center;
+
+    }
+
+
+
+    .receipt-name-1042, .receipt-value-1042, .receipt-name-1012, .receipt-value-1012, .receipt-value-1043
+
+    ,.receipt-name-1129, .receipt-name-1130, .receipt-name-1131, .receipt-name-1132
+
+    ,.receipt-name-1133, .receipt-name-1145, .receipt-name-1146, .receipt-name-1232, .receipt-name-1233
+
+    ,.receipt-name-1194, .receipt-name-1157, .receipt-name-1158
+
+    {
+
+        color: #0069b3;
+
+        font-size: 16px;
+
+        font-weight: bold;
+
+        line-height: 1.38;
+
+    }
+
+
+
+    .receipt-row-2 .receipt-col1 {
+
+        text-align: left;
+
+        padding-top: 4px;
+
+    }
+
+
+
+    .receipt-row-2 .receipt-col2 {
+
+        text-align: right;
+
+        padding-top: 4px;
+
+    }
+
+
+
+    .receipt-value-1038, .receipt-value-1021 { font-weight: bold; }
+
+
+
+    td.side-padding {
+
+        width: 42px;
+
+    }
+
+
+
+    .receipt-header1, .receipt-header2, .receipt-body, .receipt-footer, .receipt-footer2, .print-service-receipt .banner {
+
+        line-height: 1.57;
+
+    }
+
+    .receipt-header1-padding-top {
+
+        height: 26px;
+
+    }
+
+    .receipt-header1-padding-bottom {
+
+        height: 20px;
+
+    }
+
+    .receipt-header1-logo-text {
+
+        vertical-align:bottom;
+
+        width:120px
+
+    }
+
+    .receipt-header1-logo-text span {
+
+        font-size:24px;
+
+        color:#0069b3;
+
+        display:inline-block;
+
+        line-height:1;
+
+    }
+
+    .receipt-header1-sitetext {
+
+        text-align: right;
+
+    }
+
+    .receipt-footer td.receipt-footer {
+
+        padding-top: 10px;
+
+        padding-bottom: 15px;
+
+    }
+
+    .receipt-footer2 td.receipt-footer2 {
+
+        padding-bottom: 30px;
+
+        padding-top: 10px;
+
+    }
+
+    .receipt-header2 td.receipt-header2, .receipt-body td.receipt-body {
+
+        padding-bottom: 15px;
+
+        padding-top: 22px;
+
+    }
+
+	.receipt-name-1054, .receipt-value-1054 {
+
+		padding-bottom: 20px
+
+	}
+
+
+
+    .receipt-company-name {
+
+        font-size: 16px;
+
+        line-height: 1.38;
+
+    }
+
+
+
+    .receipt-company-name .receipt-row-1 { text-align: left; }
+
+    .receipt-company-name-padding { height:30px; }
+
+
+
+    .receipt-delimiter {
+
+        background-position-x: center;
+
+            background-image: url(http://files.taxcom.ru/files/cashdesk/images/background-copy-3.png);
+
+        background-repeat: no-repeat;
+
+        clear: both;
+
+        height: 9px;
+
+        margin-bottom: 30px;
+
+        margin-top: 20px;
+
+        width: 100%;
+
+    }
+
+
+
+    .receipt-value-1054 {
+
+        color: #0069b3;
+
+        display: inline-block;
+
+        font-size: 24px;
+
+        font-weight: bold;
+
+        line-height: 1.17;
+
+    }
+
+
+
+    .receipt-value-1030 {
+
+        color: #0069b3;
+
+        display: block;
+
+        font-size: 18px;
+
+        font-weight: bold;
+
+        line-height: 1.22;
+
+        text-align: left;
+
+    }
+
+
+
+    .receipt-value-1162 {
+
+        color: #0069b3;
+
+        display: block;
+
+        font-size: 18px;
+
+        font-weight: bold;
+
+    }
+
+
+
+    .receipt-delimiter2 {
+
+        clear: both;
+
+        margin-bottom: 13px;
+
+        margin-top: 14px;
+
+        width: 100%;
+
+        border: 1px solid #d5dbe6;
+
+   }
+
+
+
+    .receipt-name-1020, .receipt-value-1020 {
+
+        color: #0069b3;
+
+        display: block;
+
+        font-size: 20px;
+
+        font-weight: bold;
+
+        line-height: 1.4;
+
+        margin-bottom: 30px;
+
+    }
+
+
+
+
+
+    .receipt-delimiter3 {
+
+        background: white;
+
+        height: 20px;
+
+    }
+
+
+
+    .receipt-title {
+
+        display: block;
+
+        font-size: 30px;
+
+        font-weight: bold;
+
+        line-height: 1;
+
+    }
+
+
+
+    .receipt-header1 {
+
+        background-color: #ffffff;
+
+    }
+
+
+
+    .receipt-header1 table {
+
+        background-color: #ffffff;
+
+    }
+
+    .receipt-header1-appeal span {
+
+        text-align: center;
+
+    }
+
+    .receipt-header1-appeal-padding {
+
+        height: 25px;
+
+    }
+
+    .receipt-header1-greeting-padding {
+
+        height: 30px
+
+    }
+
+
+
+    .receipt-border1 {
+
+        background-color: #f0f3f5;
+
+    }
+
+
+
+    .receipt-border1 table {
+
+        background-color: #f0f3f5;
+
+    }
+
+
+
+    .receipt-thanks {
+
+        font-size: 24px;
+
+        font-weight: bold;
+
+        line-height: 1;
+
+    }
+
+
+
+    .receipt-subtitle {
+
+        display: block;
+
+        font-size: 18px;
+
+    }
+
+
+
+    .receipt-footer2 {
+
+        background-color: #ffffff;
+
+    }
+
+    .receipt-footer, .receipt-footer table {
+
+        background-color: #ffffff;
+
+    }
+
+    .receipt-footer2 table{
+
+        background-color: #ffffff;
+
+    }
+
+    .receipt-footer2-qr {
+
+        vertical-align: bottom;
+
+        text-align: right;
+
+    }
+
+    .receipt-footer2-service {
+
+        vertical-align: bottom;
+
+    }
+
+
+
+    .print-service-receipt td { vertical-align: middle; }
+
+
+
+    .banner {
+
+        padding-left: 42px;
+
+        padding-right: 42px;
+
+    }
+
+    .banner-title {
+
+        font-size: 24px;
+
+        text-align: center;
+
+    }
+
+    .banner-text {
+
+        text-align: center;
+
+        width: 424px;
+
+    }
+
+    .banner-button {
+
+        text-align: center;
+
+    }
+
+    .banner-button a {
+
+        border: solid 1px #0069b3;
+
+        padding: 10px;
+
+        display: inline-block;
+
+    }
+
+
+
+    .receipt-banner-bottom-image {
+
+        margin-top: -7px;
+
+        border-bottom: solid 1px #d4dae6;
+
+    }
+
+    .receipt-content-width {
+
+        max-width: 424px;
+
+        text-align: center;
+
+    }
+
+
+
+</style>
+
+<table cellspacing="0" cellpadding="0" class="print-service-receipt" lang="ru">
+
+    <tr>
+
+        <td>
+
+
+
+                <table cellspacing="0" cellpadding="0" style="width:508px">
+
+                    <tr>
+
+                        <td style="text-align: center;">
+
+                                <div style="font-size:14px;width:400px;margin:5px auto;padding:0px">
+
+                                    <text>
+
+                                        <h2 style="font-size:21px;padding:7px 0px;margin:0px;margin-top:0px;display:block;">Уважаемый клиент!</h2>
+
+                                        <p style="font-size:14px;padding:11px 0px 14px 0px;margin:0px;line-height:1;">Получи подарок-скидку в магазинах наших партнеров!</p>
+
+                                        <a href="https://get4click.ru/ext/C4TBCVMZ" target="_blank" style="display:inline-block;background:#008cd7;width:160px;height:20px;margin:0px;padding:0px;text-decoration:none;border-radius:3px;">
+
+                                            <span style="font-size:14px;display:block;color:#fff;margin:0px;padding:0px;padding-top:3px;line-height:1;">Выбрать подарок</span>
+
+                                        </a>
+
+                                    </text>
+
+                                </div>
+
+                        </td>
+
+                    </tr>
+
+                </table>
+
+
+
+
+
+<table class="receipt-header1">
+
+    <tr><td class="receipt-header1-padding-top"></td></tr>
+
+    <tr>
+
+        <td width="22"></td>
+
+        <td class="receipt-header1">
+
+            <table>
+
+                <tr>
+
+                        <td class="receipt-header1-logo" style="width:65px;">
+
+                            <img src="http://files.taxcom.ru/files/cashdesk/images/kassa.png" />
+
+                        </td>
+
+                        <td class="receipt-header1-logo-text">
+
+                            <span>Такском Касса</span>
+
+                        </td>
+
+                    <td class="receipt-header1-sitetext">
+
+                        <a target="_blank" href=""></a>
+
+                    </td>
+
+                </tr>
+
+            </table>
+
+        </td>
+
+        <td width="42"></td>
+
+    </tr>
+
+</table>
+
+<table class="receipt-header1">
+
+    <tr>
+
+        <td class="side-padding"></td>
+
+        <td class="receipt-header1">
+
+            <div class="receipt-row-1">
+
+                <table>
+
+                    <tr>
+
+                        <td class="receipt-header1-appeal-padding"></td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td class="receipt-header1-appeal receipt-content-width">
+
+                            <span class="receipt-subtitle">
+
+
+
+                                        <a target="_blank" href="https://taxcom.ru/proverka-kontragentov/search/?query=7814148471&utm_source=ofd&utm_medium=receipt&utm_campaign=receipt_ads&utm_content=receipt_link">ООО &quot;Лента&quot;</a>
+
+                            </span>
+
+                        </td>
+
+                    </tr>
+
+                </table>
+
+            </div>
+
+
+
+            <div class="receipt-row-1 receipt-company-name">
+
+                <table>
+
+                    <tr>
+
+                        <td class="receipt-company-name-padding"></td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td style="padding-right: 0px">
+
+                        </td>
+
+                        <td style="width: 100%;">
+
+                                <div class="receipt-row-1">
+
+                                    <span class="value receipt-value-1018">ИНН 7814148471  </span>
+
+                                </div>
+
+                                                            <div class="receipt-row-1">
+
+                                    <span class="value receipt-value-1009">630083, Новосибирск, ул.Большевистская, д.52/1</span>
+
+                                </div>
+
+                                                            <div class="receipt-row-1">
+
+                                    <span class="value receipt-value-1187">
+
+
+
+<span style="word-break:break-all;">Касса №29</span>
+
+                                    </span>
+
+                                </div>
+
+                        </td>
+
+                    </tr>
+
+                </table>
+
+            </div>
+
+        </td>
+
+        <td class="side-padding"></td>
+
+    </tr>
+
+    <tr><td class="receipt-header1-padding-bottom"></td></tr>
+
+</table>
+
+
+
+
+
+                            <svg xmlns="http://www.w3.org/2000/svg" height="17" viewBox="0 0 508 17" style="margin-top: -7px;">
+
+                    <path fill="#f0f3f5" fill-rule="evenodd" d="M0 0l13.368 5.593L26.737 0l13.368 5.593L53.474 0l13.368 5.593L80.211 0l13.368 5.593L106.947 0l13.369 5.593L133.684 0l13.369 5.593L160.42 0l13.368 5.593L187.158 0l13.368 5.593L213.895 0l13.368 5.593L240.632 0 254 5.593 267.368 0l13.369 5.593L294.105 0l13.369 5.593L320.842 0l13.369 5.593L347.579 0l13.368 5.593L374.316 0l13.368 5.593L401.053 0l13.368 5.593L427.79 0l13.369 5.593L454.526 0l13.369 5.593L481.263 0l13.369 5.593L508 0v17.688H0z" />
+
+                </svg>
+
+            <div class="receipt-border1">
+
+                <table class="receipt-header2">
+
+                    <tr>
+
+                        <td class="side-padding"></td>
+
+                        <td class="receipt-header2">
+
+                            <table class="receipt-row-2">
+
+                                <tr>
+
+                                    <td class="receipt-col1">
+
+                                            <span class="name receipt-name-1042">КАССОВЫЙ ЧЕК №:</span>
+
+                                            <span class="value receipt-value-1042">59</span>
+
+                                    </td>
+
+                                    <td class="receipt-col2">
+
+                                            <span class="value receipt-value-1012">17.02.21 12:13</span>
+
+                                    </td>
+
+                                </tr>
+
+                            </table>
+
+                                <table class="receipt-row-2">
+
+                                    <tr>
+
+                                        <td class="receipt-col1">
+
+                                            <span class="name receipt-name-1038">СМЕНА:</span>
+
+                                        </td>
+
+                                        <td class="receipt-col2">
+
+                                            <span class="value receipt-value-1038">204</span>
+
+                                        </td>
+
+                                    </tr>
+
+                                </table>
+
+                                                            <table class="receipt-row-2">
+
+                                    <tr>
+
+                                        <td class="receipt-col1">
+
+                                            <span class="name receipt-name-1021">КАССИР</span>
+
+                                        </td>
+
+                                        <td class="receipt-col2">
+
+                                            <span class="value receipt-value-1021">Оператор</span>
+
+                                        </td>
+
+                                    </tr>
+
+                                </table>
+
+                        </td>
+
+                        <td class="side-padding"></td>
+
+                    </tr>
+
+                </table>
+
+
+
+                <div class="receipt-delimiter"></div>
+
+                <table class="receipt-body">
+
+                    <tr>
+
+                        <td class="side-padding"></td>
+
+                        <td class="receipt-body" style="">
+
+    <table class="receipt-row-1">
+
+        <tr>
+
+            <td>
+
+                <span class="value receipt-value-1054">ПРИХОД</span>
+
+            </td>
+
+        </tr>
+
+    </table>
+
+<div class="items">
+
+
+
+<div class="item">
+
+    <table class="receipt-row-1">
+
+        <tr>
+
+            <td style="text-align: left">
+
+                <span class="value receipt-value-1030">
+
+                    Напиток сыв-мол NEO МАЖИТЕЛЬ клубн 950г
+
+                </span>
+
+            </td>
+
+        </tr>
+
+    </table>
+
+
+
+<table class="receipt-row-2">
+
+    <tr>
+
+        <td class="receipt-col1">
+
+                <span class="value receipt-value-1023">1</span>
+
+                x
+
+                <span class="value receipt-value-1079">59.88</span>
+
+        </td>
+
+        <td class="receipt-col2">
+
+                <span class="value receipt-value-1043">59.88</span>
+
+        </td>
+
+    </tr>
+
+</table>
+
+
+
+    <table class="receipt-row-2">
+
+        <tr>
+
+            <td class="receipt-col1">
+
+                <span class="name receipt-value-1199">НДС 10%</span>
+
+            </td>
+
+            <td class="receipt-col2">
+
+                <span class="value receipt-value-1200"></span>
+
+            </td>
+
+        </tr>
+
+    </table>
+
+
+
+
+
+    <table class="receipt-row-2">
+
+        <tr>
+
+            <td class="receipt-col1">
+
+                <span class="name receipt-name-1214">Признак способа расчета</span>
+
+            </td>
+
+            <td class="receipt-col2">
+
+                <span class="value receipt-value-1214">ПОЛНЫЙ РАСЧЕТ</span>
+
+            </td>
+
+        </tr>
+
+    </table>
+
+<div style="clear: both"></div>
+
+<hr class="receipt-delimiter2">
+
+</div>
+
+
+
+<div class="item">
+
+    <table class="receipt-row-1">
+
+        <tr>
+
+            <td style="text-align: left">
+
+                <span class="value receipt-value-1030">
+
+                    Йогурт БЕЛЫЙ ЗАМОК&#160;малина 2,5% т/п 450г
+
+                </span>
+
+            </td>
+
+        </tr>
+
+    </table>
+
+
+
+<table class="receipt-row-2">
+
+    <tr>
+
+        <td class="receipt-col1">
+
+                <span class="value receipt-value-1023">1</span>
+
+                x
+
+                <span class="value receipt-value-1079">49.99</span>
+
+        </td>
+
+        <td class="receipt-col2">
+
+                <span class="value receipt-value-1043">49.99</span>
+
+        </td>
+
+    </tr>
+
+</table>
+
+
+
+    <table class="receipt-row-2">
+
+        <tr>
+
+            <td class="receipt-col1">
+
+                <span class="name receipt-value-1199">НДС 10%</span>
+
+            </td>
+
+            <td class="receipt-col2">
+
+                <span class="value receipt-value-1200"></span>
+
+            </td>
+
+        </tr>
+
+    </table>
+
+
+
+
+
+    <table class="receipt-row-2">
+
+        <tr>
+
+            <td class="receipt-col1">
+
+                <span class="name receipt-name-1214">Признак способа расчета</span>
+
+            </td>
+
+            <td class="receipt-col2">
+
+                <span class="value receipt-value-1214">ПОЛНЫЙ РАСЧЕТ</span>
+
+            </td>
+
+        </tr>
+
+    </table>
+
+<div style="clear: both"></div>
+
+<hr class="receipt-delimiter2">
+
+</div>
+
+
+
+<div class="item">
+
+    <table class="receipt-row-1">
+
+        <tr>
+
+            <td style="text-align: left">
+
+                <span class="value receipt-value-1030">
+
+                    Пакет ЛЕНТА майка 9кг
+
+                </span>
+
+            </td>
+
+        </tr>
+
+    </table>
+
+
+
+<table class="receipt-row-2">
+
+    <tr>
+
+        <td class="receipt-col1">
+
+                <span class="value receipt-value-1023">1</span>
+
+                x
+
+                <span class="value receipt-value-1079">3.49</span>
+
+        </td>
+
+        <td class="receipt-col2">
+
+                <span class="value receipt-value-1043">3.49</span>
+
+        </td>
+
+    </tr>
+
+</table>
+
+
+
+    <table class="receipt-row-2">
+
+        <tr>
+
+            <td class="receipt-col1">
+
+                <span class="name receipt-value-1199">НДС 20%</span>
+
+            </td>
+
+            <td class="receipt-col2">
+
+                <span class="value receipt-value-1200"></span>
+
+            </td>
+
+        </tr>
+
+    </table>
+
+
+
+
+
+    <table class="receipt-row-2">
+
+        <tr>
+
+            <td class="receipt-col1">
+
+                <span class="name receipt-name-1214">Признак способа расчета</span>
+
+            </td>
+
+            <td class="receipt-col2">
+
+                <span class="value receipt-value-1214">ПОЛНЫЙ РАСЧЕТ</span>
+
+            </td>
+
+        </tr>
+
+    </table>
+
+<div style="clear: both"></div>
+
+<hr class="receipt-delimiter2">
+
+</div>
+
+
+
+<div class="item">
+
+    <table class="receipt-row-1">
+
+        <tr>
+
+            <td style="text-align: left">
+
+                <span class="value receipt-value-1030">
+
+                    Заправка д/фунчозы СЭН СОЙ по-кор 80г
+
+                </span>
+
+            </td>
+
+        </tr>
+
+    </table>
+
+
+
+<table class="receipt-row-2">
+
+    <tr>
+
+        <td class="receipt-col1">
+
+                <span class="value receipt-value-1023">1</span>
+
+                x
+
+                <span class="value receipt-value-1079">45.69</span>
+
+        </td>
+
+        <td class="receipt-col2">
+
+                <span class="value receipt-value-1043">45.69</span>
+
+        </td>
+
+    </tr>
+
+</table>
+
+
+
+    <table class="receipt-row-2">
+
+        <tr>
+
+            <td class="receipt-col1">
+
+                <span class="name receipt-value-1199">НДС 20%</span>
+
+            </td>
+
+            <td class="receipt-col2">
+
+                <span class="value receipt-value-1200"></span>
+
+            </td>
+
+        </tr>
+
+    </table>
+
+
+
+
+
+    <table class="receipt-row-2">
+
+        <tr>
+
+            <td class="receipt-col1">
+
+                <span class="name receipt-name-1214">Признак способа расчета</span>
+
+            </td>
+
+            <td class="receipt-col2">
+
+                <span class="value receipt-value-1214">ПОЛНЫЙ РАСЧЕТ</span>
+
+            </td>
+
+        </tr>
+
+    </table>
+
+<div style="clear: both"></div>
+
+<hr class="receipt-delimiter2">
+
+</div>
+
+
+
+<div class="item">
+
+    <table class="receipt-row-1">
+
+        <tr>
+
+            <td style="text-align: left">
+
+                <span class="value receipt-value-1030">
+
+                    Чипсы БИНГРЕ зяки-зяки 50г
+
+                </span>
+
+            </td>
+
+        </tr>
+
+    </table>
+
+
+
+<table class="receipt-row-2">
+
+    <tr>
+
+        <td class="receipt-col1">
+
+                <span class="value receipt-value-1023">1</span>
+
+                x
+
+                <span class="value receipt-value-1079">43.99</span>
+
+        </td>
+
+        <td class="receipt-col2">
+
+                <span class="value receipt-value-1043">43.99</span>
+
+        </td>
+
+    </tr>
+
+</table>
+
+
+
+    <table class="receipt-row-2">
+
+        <tr>
+
+            <td class="receipt-col1">
+
+                <span class="name receipt-value-1199">НДС 20%</span>
+
+            </td>
+
+            <td class="receipt-col2">
+
+                <span class="value receipt-value-1200"></span>
+
+            </td>
+
+        </tr>
+
+    </table>
+
+
+
+
+
+    <table class="receipt-row-2">
+
+        <tr>
+
+            <td class="receipt-col1">
+
+                <span class="name receipt-name-1214">Признак способа расчета</span>
+
+            </td>
+
+            <td class="receipt-col2">
+
+                <span class="value receipt-value-1214">ПОЛНЫЙ РАСЧЕТ</span>
+
+            </td>
+
+        </tr>
+
+    </table>
+
+<div style="clear: both"></div>
+
+<hr class="receipt-delimiter2">
+
+</div>
+
+
+
+<div class="item">
+
+    <table class="receipt-row-1">
+
+        <tr>
+
+            <td style="text-align: left">
+
+                <span class="value receipt-value-1030">
+
+                    Мороженое MAXIBON Страчателла&#160;140мл
+
+                </span>
+
+            </td>
+
+        </tr>
+
+    </table>
+
+
+
+<table class="receipt-row-2">
+
+    <tr>
+
+        <td class="receipt-col1">
+
+                <span class="value receipt-value-1023">1</span>
+
+                x
+
+                <span class="value receipt-value-1079">48.99</span>
+
+        </td>
+
+        <td class="receipt-col2">
+
+                <span class="value receipt-value-1043">48.99</span>
+
+        </td>
+
+    </tr>
+
+</table>
+
+
+
+    <table class="receipt-row-2">
+
+        <tr>
+
+            <td class="receipt-col1">
+
+                <span class="name receipt-value-1199">НДС 10%</span>
+
+            </td>
+
+            <td class="receipt-col2">
+
+                <span class="value receipt-value-1200"></span>
+
+            </td>
+
+        </tr>
+
+    </table>
+
+
+
+
+
+    <table class="receipt-row-2">
+
+        <tr>
+
+            <td class="receipt-col1">
+
+                <span class="name receipt-name-1214">Признак способа расчета</span>
+
+            </td>
+
+            <td class="receipt-col2">
+
+                <span class="value receipt-value-1214">ПОЛНЫЙ РАСЧЕТ</span>
+
+            </td>
+
+        </tr>
+
+    </table>
+
+<div style="clear: both"></div>
+
+<hr class="receipt-delimiter2">
+
+</div>
+
+
+
+<div class="item">
+
+    <table class="receipt-row-1">
+
+        <tr>
+
+            <td style="text-align: left">
+
+                <span class="value receipt-value-1030">
+
+                    Огурцы среднеплодные гладкие вес
+
+                </span>
+
+            </td>
+
+        </tr>
+
+    </table>
+
+
+
+<table class="receipt-row-2">
+
+    <tr>
+
+        <td class="receipt-col1">
+
+                <span class="value receipt-value-1023">0.198</span>
+
+                x
+
+                <span class="value receipt-value-1079">148.29</span>
+
+        </td>
+
+        <td class="receipt-col2">
+
+                <span class="value receipt-value-1043">29.36</span>
+
+        </td>
+
+    </tr>
+
+</table>
+
+
+
+    <table class="receipt-row-2">
+
+        <tr>
+
+            <td class="receipt-col1">
+
+                <span class="name receipt-value-1199">НДС 10%</span>
+
+            </td>
+
+            <td class="receipt-col2">
+
+                <span class="value receipt-value-1200"></span>
+
+            </td>
+
+        </tr>
+
+    </table>
+
+
+
+
+
+    <table class="receipt-row-2">
+
+        <tr>
+
+            <td class="receipt-col1">
+
+                <span class="name receipt-name-1214">Признак способа расчета</span>
+
+            </td>
+
+            <td class="receipt-col2">
+
+                <span class="value receipt-value-1214">ПОЛНЫЙ РАСЧЕТ</span>
+
+            </td>
+
+        </tr>
+
+    </table>
+
+<div style="clear: both"></div>
+
+<hr class="receipt-delimiter2">
+
+</div>
+
+
+
+<div class="item">
+
+    <table class="receipt-row-1">
+
+        <tr>
+
+            <td style="text-align: left">
+
+                <span class="value receipt-value-1030">
+
+                    Мороженое ALPEN GOLD эскимо двухсл 90мл
+
+                </span>
+
+            </td>
+
+        </tr>
+
+    </table>
+
+
+
+<table class="receipt-row-2">
+
+    <tr>
+
+        <td class="receipt-col1">
+
+                <span class="value receipt-value-1023">1</span>
+
+                x
+
+                <span class="value receipt-value-1079">52.99</span>
+
+        </td>
+
+        <td class="receipt-col2">
+
+                <span class="value receipt-value-1043">52.99</span>
+
+        </td>
+
+    </tr>
+
+</table>
+
+
+
+    <table class="receipt-row-2">
+
+        <tr>
+
+            <td class="receipt-col1">
+
+                <span class="name receipt-value-1199">НДС 10%</span>
+
+            </td>
+
+            <td class="receipt-col2">
+
+                <span class="value receipt-value-1200"></span>
+
+            </td>
+
+        </tr>
+
+    </table>
+
+
+
+
+
+    <table class="receipt-row-2">
+
+        <tr>
+
+            <td class="receipt-col1">
+
+                <span class="name receipt-name-1214">Признак способа расчета</span>
+
+            </td>
+
+            <td class="receipt-col2">
+
+                <span class="value receipt-value-1214">ПОЛНЫЙ РАСЧЕТ</span>
+
+            </td>
+
+        </tr>
+
+    </table>
+
+<div style="clear: both"></div>
+
+<hr class="receipt-delimiter2">
+
+</div>
+
+
+
+<div class="item">
+
+    <table class="receipt-row-1">
+
+        <tr>
+
+            <td style="text-align: left">
+
+                <span class="value receipt-value-1030">
+
+                    Конфета PICNIC BIG с арахис. и изюм. 76г
+
+                </span>
+
+            </td>
+
+        </tr>
+
+    </table>
+
+
+
+<table class="receipt-row-2">
+
+    <tr>
+
+        <td class="receipt-col1">
+
+                <span class="value receipt-value-1023">1</span>
+
+                x
+
+                <span class="value receipt-value-1079">42.99</span>
+
+        </td>
+
+        <td class="receipt-col2">
+
+                <span class="value receipt-value-1043">42.99</span>
+
+        </td>
+
+    </tr>
+
+</table>
+
+
+
+    <table class="receipt-row-2">
+
+        <tr>
+
+            <td class="receipt-col1">
+
+                <span class="name receipt-value-1199">НДС 20%</span>
+
+            </td>
+
+            <td class="receipt-col2">
+
+                <span class="value receipt-value-1200"></span>
+
+            </td>
+
+        </tr>
+
+    </table>
+
+
+
+
+
+    <table class="receipt-row-2">
+
+        <tr>
+
+            <td class="receipt-col1">
+
+                <span class="name receipt-name-1214">Признак способа расчета</span>
+
+            </td>
+
+            <td class="receipt-col2">
+
+                <span class="value receipt-value-1214">ПОЛНЫЙ РАСЧЕТ</span>
+
+            </td>
+
+        </tr>
+
+    </table>
+
+<div style="clear: both"></div>
+
+<hr class="receipt-delimiter2">
+
+</div>
+
+
+
+<div class="item">
+
+    <table class="receipt-row-1">
+
+        <tr>
+
+            <td style="text-align: left">
+
+                <span class="value receipt-value-1030">
+
+                    Шоколад KITКAT RaspberyTaste с вафлей108
+
+                </span>
+
+            </td>
+
+        </tr>
+
+    </table>
+
+
+
+<table class="receipt-row-2">
+
+    <tr>
+
+        <td class="receipt-col1">
+
+                <span class="value receipt-value-1023">2</span>
+
+                x
+
+                <span class="value receipt-value-1079">69.89</span>
+
+        </td>
+
+        <td class="receipt-col2">
+
+                <span class="value receipt-value-1043">139.78</span>
+
+        </td>
+
+    </tr>
+
+</table>
+
+
+
+    <table class="receipt-row-2">
+
+        <tr>
+
+            <td class="receipt-col1">
+
+                <span class="name receipt-value-1199">НДС 20%</span>
+
+            </td>
+
+            <td class="receipt-col2">
+
+                <span class="value receipt-value-1200"></span>
+
+            </td>
+
+        </tr>
+
+    </table>
+
+
+
+
+
+    <table class="receipt-row-2">
+
+        <tr>
+
+            <td class="receipt-col1">
+
+                <span class="name receipt-name-1214">Признак способа расчета</span>
+
+            </td>
+
+            <td class="receipt-col2">
+
+                <span class="value receipt-value-1214">ПОЛНЫЙ РАСЧЕТ</span>
+
+            </td>
+
+        </tr>
+
+    </table>
+
+<div style="clear: both"></div>
+
+<hr class="receipt-delimiter2">
+
+</div>
+
+
+
+<div class="item">
+
+    <table class="receipt-row-1">
+
+        <tr>
+
+            <td style="text-align: left">
+
+                <span class="value receipt-value-1030">
+
+                    Батончик шок NUTS Мегабайт 66г
+
+                </span>
+
+            </td>
+
+        </tr>
+
+    </table>
+
+
+
+<table class="receipt-row-2">
+
+    <tr>
+
+        <td class="receipt-col1">
+
+                <span class="value receipt-value-1023">1</span>
+
+                x
+
+                <span class="value receipt-value-1079">39.89</span>
+
+        </td>
+
+        <td class="receipt-col2">
+
+                <span class="value receipt-value-1043">39.89</span>
+
+        </td>
+
+    </tr>
+
+</table>
+
+
+
+    <table class="receipt-row-2">
+
+        <tr>
+
+            <td class="receipt-col1">
+
+                <span class="name receipt-value-1199">НДС 20%</span>
+
+            </td>
+
+            <td class="receipt-col2">
+
+                <span class="value receipt-value-1200"></span>
+
+            </td>
+
+        </tr>
+
+    </table>
+
+
+
+
+
+    <table class="receipt-row-2">
+
+        <tr>
+
+            <td class="receipt-col1">
+
+                <span class="name receipt-name-1214">Признак способа расчета</span>
+
+            </td>
+
+            <td class="receipt-col2">
+
+                <span class="value receipt-value-1214">ПОЛНЫЙ РАСЧЕТ</span>
+
+            </td>
+
+        </tr>
+
+    </table>
+
+<div style="clear: both"></div>
+
+<hr class="receipt-delimiter2">
+
+</div>
+
+
+
+<div class="item">
+
+    <table class="receipt-row-1">
+
+        <tr>
+
+            <td style="text-align: left">
+
+                <span class="value receipt-value-1030">
+
+                    Шок KITKAT ChristmEdit мол/бел.кориц108г
+
+                </span>
+
+            </td>
+
+        </tr>
+
+    </table>
+
+
+
+<table class="receipt-row-2">
+
+    <tr>
+
+        <td class="receipt-col1">
+
+                <span class="value receipt-value-1023">2</span>
+
+                x
+
+                <span class="value receipt-value-1079">99.56</span>
+
+        </td>
+
+        <td class="receipt-col2">
+
+                <span class="value receipt-value-1043">199.12</span>
+
+        </td>
+
+    </tr>
+
+</table>
+
+
+
+    <table class="receipt-row-2">
+
+        <tr>
+
+            <td class="receipt-col1">
+
+                <span class="name receipt-value-1199">НДС 20%</span>
+
+            </td>
+
+            <td class="receipt-col2">
+
+                <span class="value receipt-value-1200"></span>
+
+            </td>
+
+        </tr>
+
+    </table>
+
+
+
+
+
+    <table class="receipt-row-2">
+
+        <tr>
+
+            <td class="receipt-col1">
+
+                <span class="name receipt-name-1214">Признак способа расчета</span>
+
+            </td>
+
+            <td class="receipt-col2">
+
+                <span class="value receipt-value-1214">ПОЛНЫЙ РАСЧЕТ</span>
+
+            </td>
+
+        </tr>
+
+    </table>
+
+<div style="clear: both"></div>
+
+<hr class="receipt-delimiter2">
+
+</div>
+
+
+
+<div class="item">
+
+    <table class="receipt-row-1">
+
+        <tr>
+
+            <td style="text-align: left">
+
+                <span class="value receipt-value-1030">
+
+                    Батончик шок SNICKERS Супер 95г
+
+                </span>
+
+            </td>
+
+        </tr>
+
+    </table>
+
+
+
+<table class="receipt-row-2">
+
+    <tr>
+
+        <td class="receipt-col1">
+
+                <span class="value receipt-value-1023">1</span>
+
+                x
+
+                <span class="value receipt-value-1079">53.71</span>
+
+        </td>
+
+        <td class="receipt-col2">
+
+                <span class="value receipt-value-1043">53.71</span>
+
+        </td>
+
+    </tr>
+
+</table>
+
+
+
+    <table class="receipt-row-2">
+
+        <tr>
+
+            <td class="receipt-col1">
+
+                <span class="name receipt-value-1199">НДС 20%</span>
+
+            </td>
+
+            <td class="receipt-col2">
+
+                <span class="value receipt-value-1200"></span>
+
+            </td>
+
+        </tr>
+
+    </table>
+
+
+
+
+
+    <table class="receipt-row-2">
+
+        <tr>
+
+            <td class="receipt-col1">
+
+                <span class="name receipt-name-1214">Признак способа расчета</span>
+
+            </td>
+
+            <td class="receipt-col2">
+
+                <span class="value receipt-value-1214">ПОЛНЫЙ РАСЧЕТ</span>
+
+            </td>
+
+        </tr>
+
+    </table>
+
+<div style="clear: both"></div>
+
+<hr class="receipt-delimiter2">
+
+</div>
+
+
+
+<div class="item">
+
+    <table class="receipt-row-1">
+
+        <tr>
+
+            <td style="text-align: left">
+
+                <span class="value receipt-value-1030">
+
+                    Филе кур НПФ охл подл вес
+
+                </span>
+
+            </td>
+
+        </tr>
+
+    </table>
+
+
+
+<table class="receipt-row-2">
+
+    <tr>
+
+        <td class="receipt-col1">
+
+                <span class="value receipt-value-1023">0.704</span>
+
+                x
+
+                <span class="value receipt-value-1079">314.99</span>
+
+        </td>
+
+        <td class="receipt-col2">
+
+                <span class="value receipt-value-1043">221.75</span>
+
+        </td>
+
+    </tr>
+
+</table>
+
+
+
+    <table class="receipt-row-2">
+
+        <tr>
+
+            <td class="receipt-col1">
+
+                <span class="name receipt-value-1199">НДС 10%</span>
+
+            </td>
+
+            <td class="receipt-col2">
+
+                <span class="value receipt-value-1200"></span>
+
+            </td>
+
+        </tr>
+
+    </table>
+
+
+
+
+
+    <table class="receipt-row-2">
+
+        <tr>
+
+            <td class="receipt-col1">
+
+                <span class="name receipt-name-1214">Признак способа расчета</span>
+
+            </td>
+
+            <td class="receipt-col2">
+
+                <span class="value receipt-value-1214">ПОЛНЫЙ РАСЧЕТ</span>
+
+            </td>
+
+        </tr>
+
+    </table>
+
+<div style="clear: both"></div>
+
+<hr class="receipt-delimiter2">
+
+</div>
+
+
+
+<div class="item">
+
+    <table class="receipt-row-1">
+
+        <tr>
+
+            <td style="text-align: left">
+
+                <span class="value receipt-value-1030">
+
+                    Хлеб HARRY&#39;S Аmerican sandwich пшен 470г
+
+                </span>
+
+            </td>
+
+        </tr>
+
+    </table>
+
+
+
+<table class="receipt-row-2">
+
+    <tr>
+
+        <td class="receipt-col1">
+
+                <span class="value receipt-value-1023">1</span>
+
+                x
+
+                <span class="value receipt-value-1079">84.39</span>
+
+        </td>
+
+        <td class="receipt-col2">
+
+                <span class="value receipt-value-1043">84.39</span>
+
+        </td>
+
+    </tr>
+
+</table>
+
+
+
+    <table class="receipt-row-2">
+
+        <tr>
+
+            <td class="receipt-col1">
+
+                <span class="name receipt-value-1199">НДС 10%</span>
+
+            </td>
+
+            <td class="receipt-col2">
+
+                <span class="value receipt-value-1200"></span>
+
+            </td>
+
+        </tr>
+
+    </table>
+
+
+
+
+
+    <table class="receipt-row-2">
+
+        <tr>
+
+            <td class="receipt-col1">
+
+                <span class="name receipt-name-1214">Признак способа расчета</span>
+
+            </td>
+
+            <td class="receipt-col2">
+
+                <span class="value receipt-value-1214">ПОЛНЫЙ РАСЧЕТ</span>
+
+            </td>
+
+        </tr>
+
+    </table>
+
+<div style="clear: both"></div>
+
+<hr class="receipt-delimiter2">
+
+</div>
+
+
+
+<div class="item">
+
+    <table class="receipt-row-1">
+
+        <tr>
+
+            <td style="text-align: left">
+
+                <span class="value receipt-value-1030">
+
+                    Чипсы JUST BRUTAL слад тайский перец 100
+
+                </span>
+
+            </td>
+
+        </tr>
+
+    </table>
+
+
+
+<table class="receipt-row-2">
+
+    <tr>
+
+        <td class="receipt-col1">
+
+                <span class="value receipt-value-1023">1</span>
+
+                x
+
+                <span class="value receipt-value-1079">79.99</span>
+
+        </td>
+
+        <td class="receipt-col2">
+
+                <span class="value receipt-value-1043">79.99</span>
+
+        </td>
+
+    </tr>
+
+</table>
+
+
+
+    <table class="receipt-row-2">
+
+        <tr>
+
+            <td class="receipt-col1">
+
+                <span class="name receipt-value-1199">НДС 20%</span>
+
+            </td>
+
+            <td class="receipt-col2">
+
+                <span class="value receipt-value-1200"></span>
+
+            </td>
+
+        </tr>
+
+    </table>
+
+
+
+
+
+    <table class="receipt-row-2">
+
+        <tr>
+
+            <td class="receipt-col1">
+
+                <span class="name receipt-name-1214">Признак способа расчета</span>
+
+            </td>
+
+            <td class="receipt-col2">
+
+                <span class="value receipt-value-1214">ПОЛНЫЙ РАСЧЕТ</span>
+
+            </td>
+
+        </tr>
+
+    </table>
+
+<div style="clear: both"></div>
+
+<hr class="receipt-delimiter2">
+
+</div>
+
+                <table class="receipt-row-2">
+
+            <tr>
+
+                <td class="receipt-col1">
+
+                    <span class="name receipt-name-1020">ИТОГО:</span>
+
+                </td>
+
+                <td class="receipt-col2">
+
+                    <span class="value receipt-value-1020">1196.00</span>
+
+                </td>
+
+            </tr>
+
+        </table>
+
+</div>
+
+                        </td>
+
+                        <td class="side-padding"></td>
+
+                    </tr>
+
+                </table>
+
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 508 20" style="margin-bottom: -7px;">
+
+                        <path fill="#ffffff" fill-rule="evenodd" d="M0 0l13.368 8.198L26.737 0l13.368 8.198L53.474 0l13.368 8.198L80.211 0l13.368 8.198L106.947 0l13.369 8.198L133.684 0l13.369 8.198L160.42 0l13.368 8.198L187.158 0l13.368 8.198L213.895 0l13.368 8.198L240.632 0 254 8.198 267.368 0l13.369 8.198L294.105 0l13.369 8.198L320.842 0l13.369 8.198L347.579 0l13.368 8.198L374.316 0l13.368 8.198L401.053 0l13.368 8.198L427.79 0l13.369 8.198L454.526 0l13.369 8.198L481.263 0l13.369 8.198L508 0v19.5H0z" />
+
+                    </svg>
+
+            </div>
+
+            <table class="receipt-footer">
+
+                <tr>
+
+                    <td class="side-padding"></td>
+
+                    <td class="receipt-footer">
+
+
+
+
+
+
+
+
+
+    <table class="receipt-row-2">
+
+        <tr>
+
+            <td class="receipt-col1">
+
+                <span class="name receipt-name-1081">БЕЗНАЛИЧНЫМИ:</span>
+
+            </td>
+
+            <td class="receipt-col2">
+
+                <span class="value receipt-value-1081">1196.00</span>
+
+            </td>
+
+        </tr>
+
+    </table>
+
+
+
+
+
+
+
+    <table class="receipt-row-2">
+
+        <tr>
+
+            <td class="receipt-col1">
+
+                <span class="name receipt-name-1102">НДС 20%:</span>
+
+            </td>
+
+            <td class="receipt-col2">
+
+                <span class="value receipt-value-1102">108.12</span>
+
+            </td>
+
+        </tr>
+
+    </table>
+
+    <table class="receipt-row-2">
+
+        <tr>
+
+            <td class="receipt-col1">
+
+                <span class="name receipt-name-1103">НДС 10%:</span>
+
+            </td>
+
+            <td class="receipt-col2">
+
+                <span class="value receipt-value-1103">49.75</span>
+
+            </td>
+
+        </tr>
+
+    </table>
+
+<div style="clear: both"></div>
+
+    <hr class="receipt-delimiter2">
+
+
+
+    <table class="receipt-row-2">
+
+        <tr>
+
+            <td class="receipt-col1">
+
+                <span class="name receipt-name-1117">ЭЛ.АДР.ОТПРАВИТЕЛЯ:</span>
+
+            </td>
+
+            <td class="receipt-col2">
+
+                <span class="value receipt-value-1117">
+
+
+
+        <a href="mailto:check@taxcom.ru">check@taxcom.ru</a>
+
+
+
+                </span>
+
+            </td>
+
+        </tr>
+
+    </table>
+
+<div style="clear: both"></div>
+
+    <hr class="receipt-delimiter2">
+
+    <table class="receipt-row-2">
+
+        <tr>
+
+            <td class="receipt-col1">
+
+                <span class="name receipt-name-1060">САЙТ ФНС:</span>
+
+            </td>
+
+            <td class="receipt-col2">
+
+                <span class="value receipt-value-1060">
+
+
+
+www.nalog.ru
+
+                </span>
+
+            </td>
+
+        </tr>
+
+    </table>
+
+    <table class="receipt-row-2">
+
+        <tr>
+
+            <td class="receipt-col1">
+
+                <span class="name receipt-name-1008">ЭЛ.АДР.ПОКУПАТЕЛЯ</span>
+
+            </td>
+
+            <td class="receipt-col2">
+
+                <span class="value receipt-value-1008">
+
+
+
+        <a href="mailto:ivanovivan@example.com">ivanovivan@example.com</a>
+
+
+
+                </span>
+
+            </td>
+
+        </tr>
+
+    </table>
+
+    <table class="receipt-row-2">
+
+        <tr>
+
+            <td class="receipt-col1">
+
+                <span class="name receipt-name-1055">Система НО</span>
+
+            </td>
+
+            <td class="receipt-col2">
+
+                <span class="value receipt-value-1055">ОСН</span>
+
+            </td>
+
+        </tr>
+
+    </table>
+
+    <table class="receipt-row-2">
+
+        <tr>
+
+            <td class="receipt-col1">
+
+                <span class="name receipt-name-1037">№ ККТ:</span>
+
+            </td>
+
+            <td class="receipt-col2">
+
+                <span class="value receipt-value-1037">0000000000000000    </span>
+
+            </td>
+
+        </tr>
+
+    </table>
+
+    <table class="receipt-row-2">
+
+        <tr>
+
+            <td class="receipt-col1">
+
+                <span class="name receipt-name-1041">№ ФН:</span>
+
+            </td>
+
+            <td class="receipt-col2">
+
+                <span class="value receipt-value-1041">0000000000000000</span>
+
+            </td>
+
+        </tr>
+
+    </table>
+
+    <table class="receipt-row-2">
+
+        <tr>
+
+            <td class="receipt-col1">
+
+                <span class="name receipt-name-1040">№ ФД:</span>
+
+            </td>
+
+            <td class="receipt-col2">
+
+                <span class="value receipt-value-1040">00000</span>
+
+            </td>
+
+        </tr>
+
+    </table>
+
+    <table class="receipt-row-2">
+
+        <tr>
+
+            <td class="receipt-col1">
+
+                <span class="name receipt-name-1077">ФП</span>
+
+            </td>
+
+            <td class="receipt-col2">
+
+                <span class="value receipt-value-1077">0000000000</span>
+
+            </td>
+
+        </tr>
+
+    </table>
+
+                    </td>
+
+                    <td class="side-padding"></td>
+
+                </tr>
+
+            </table>
+
+                <table class="receipt-footer2">
+
+                    <tr>
+
+                        <td class="side-padding"></td>
+
+                        <td class="receipt-footer2">
+
+                            <table>
+
+                                <tr>
+
+                                    <td class="receipt-footer2-service">
+
+                                            <img src="http://files.taxcom.ru/files/cashdesk/images/taxcom-logo-2.png" />
+
+                                        <br />Сервис проверки чеков:<br /> <a target="_blank" href="https://receipt.taxcom.ru">https://receipt.taxcom.ru</a>
+
+                                    </td>
+
+                                    <td class="receipt-footer2-qr">
+
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+width="231px" height="231px" viewBox="0 0 231 231" enable-background="new 0 0 231 231" xml:space="preserve">
+<rect x="0" y="0" width="231" height="231" fill="rgb(255,255,255)" /><g transform="translate(14,14)"><g transform="translate(56,0) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(63,0) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(70,0) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(91,0) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(98,0) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(119,0) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(56,7) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(91,7) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(112,7) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(119,7) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(126,7) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(133,7) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(140,7) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(56,14) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(70,14) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(91,14) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(98,14) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(112,14) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(126,14) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(133,14) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(140,14) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(63,21) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(70,21) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(91,21) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(112,21) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(119,21) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(56,28) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(63,28) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(84,28) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(91,28) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(98,28) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(112,28) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(119,28) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(133,28) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(63,35) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(77,35) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(119,35) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(140,35) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(56,42) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(70,42) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(84,42) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(98,42) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(112,42) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(126,42) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(140,42) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(70,49) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(84,49) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(91,49) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(112,49) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(133,49) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(140,49) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(0,56) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(21,56) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(28,56) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(35,56) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(42,56) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(49,56) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(56,56) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(70,56) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(77,56) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(98,56) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(105,56) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(112,56) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(119,56) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(133,56) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(147,56) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(168,56) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(182,56) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(189,56) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(196,56) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(0,63) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(21,63) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(28,63) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(35,63) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(63,63) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(70,63) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(77,63) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(105,63) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(126,63) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(133,63) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(147,63) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(161,63) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(168,63) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(182,63) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(189,63) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(7,70) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(21,70) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(28,70) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(42,70) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(56,70) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(77,70) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(84,70) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(98,70) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(105,70) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(126,70) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(161,70) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(168,70) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(182,70) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(21,77) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(28,77) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(56,77) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(63,77) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(70,77) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(77,77) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(84,77) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(105,77) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(112,77) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(119,77) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(126,77) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(147,77) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(154,77) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(161,77) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(175,77) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(196,77) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(0,84) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(21,84) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(28,84) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(42,84) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(49,84) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(77,84) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(105,84) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(133,84) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(140,84) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(154,84) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(161,84) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(196,84) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(7,91) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(14,91) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(35,91) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(49,91) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(63,91) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(70,91) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(84,91) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(91,91) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(105,91) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(112,91) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(119,91) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(126,91) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(154,91) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(161,91) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(168,91) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(175,91) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(182,91) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(189,91) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(196,91) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(7,98) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(14,98) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(42,98) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(49,98) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(63,98) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(77,98) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(91,98) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(98,98) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(105,98) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(126,98) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(133,98) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(140,98) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(147,98) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(154,98) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(168,98) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(182,98) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(196,98) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(21,105) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(28,105) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(35,105) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(49,105) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(56,105) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(63,105) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(77,105) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(84,105) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(98,105) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(105,105) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(133,105) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(161,105) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(168,105) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(182,105) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(196,105) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(0,112) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(21,112) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(42,112) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(49,112) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(56,112) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(84,112) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(91,112) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(112,112) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(133,112) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(140,112) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(147,112) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(175,112) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(0,119) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(14,119) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(21,119) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(35,119) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(49,119) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(56,119) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(77,119) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(84,119) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(98,119) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(126,119) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(133,119) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(168,119) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(182,119) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(189,119) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(0,126) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(7,126) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(14,126) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(35,126) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(42,126) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(49,126) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(84,126) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(98,126) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(105,126) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(119,126) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(133,126) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(168,126) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(175,126) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(196,126) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(0,133) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(7,133) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(28,133) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(49,133) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(56,133) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(63,133) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(77,133) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(84,133) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(91,133) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(126,133) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(133,133) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(154,133) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(175,133) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(182,133) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(0,140) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(7,140) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(14,140) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(28,140) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(42,140) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(49,140) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(70,140) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(84,140) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(91,140) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(119,140) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(140,140) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(147,140) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(154,140) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(161,140) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(168,140) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(175,140) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(182,140) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(189,140) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(56,147) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(63,147) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(77,147) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(91,147) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(98,147) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(105,147) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(119,147) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(126,147) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(140,147) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(168,147) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(175,147) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(56,154) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(77,154) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(84,154) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(91,154) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(105,154) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(112,154) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(119,154) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(126,154) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(133,154) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(140,154) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(154,154) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(168,154) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(175,154) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(56,161) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(63,161) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(70,161) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(91,161) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(119,161) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(133,161) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(140,161) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(168,161) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(189,161) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(196,161) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(56,168) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(77,168) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(84,168) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(91,168) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(112,168) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(133,168) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(140,168) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(147,168) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(154,168) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(161,168) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(168,168) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(175,168) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(189,168) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(56,175) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(70,175) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(84,175) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(91,175) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(98,175) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(105,175) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(112,175) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(119,175) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(126,175) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(147,175) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(196,175) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(63,182) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(77,182) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(84,182) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(91,182) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(98,182) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(105,182) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(119,182) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(140,182) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(147,182) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(161,182) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(168,182) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(182,182) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(189,182) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(196,182) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(63,189) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(70,189) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(91,189) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(105,189) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(126,189) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(154,189) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(161,189) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(175,189) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(182,189) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(196,189) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(56,196) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(77,196) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(91,196) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(126,196) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(133,196) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(140,196) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(154,196) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(168,196) scale(0.07,0.07)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(0,0) scale(0.49, 0.49)"><g transform="" style="fill: rgb(0, 0, 0);">
+<g>
+	<rect x="15" y="15" style="fill:none;" width="70" height="70"/>
+	<path d="M85,0H15H0v15v70v15h15h70h15V85V15V0H85z M85,85H15V15h70V85z"/>
+</g>
+</g></g><g transform="translate(154,0) scale(0.49, 0.49)"><g transform="" style="fill: rgb(0, 0, 0);">
+<g>
+	<rect x="15" y="15" style="fill:none;" width="70" height="70"/>
+	<path d="M85,0H15H0v15v70v15h15h70h15V85V15V0H85z M85,85H15V15h70V85z"/>
+</g>
+</g></g><g transform="translate(0,154) scale(0.49, 0.49)"><g transform="" style="fill: rgb(0, 0, 0);">
+<g>
+	<rect x="15" y="15" style="fill:none;" width="70" height="70"/>
+	<path d="M85,0H15H0v15v70v15h15h70h15V85V15V0H85z M85,85H15V15h70V85z"/>
+</g>
+</g></g><g transform="translate(14,14) scale(0.21, 0.21)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(168,14) scale(0.21, 0.21)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g><g transform="translate(14,168) scale(0.21, 0.21)"><g transform="" style="fill: rgb(0, 0, 0);">
+<rect width="100" height="100"/>
+</g></g></g></svg>                                    </td>
+
+                                </tr>
+
+                            </table>
+
+                        </td>
+
+                        <td class="side-padding"></td>
+
+                    </tr>
+
+                </table>
+
+                    <div class="receipt-thanks" style="height: 126px; position: relative; text-align: center; margin-top: -7px;">
+
+                        <svg xmlns="http://www.w3.org/2000/svg" height="126" viewBox="0 0 508 126">
+
+                            <path fill="#0069b3" fill-rule="evenodd" d="M508 0v126l-13.368-6.71-13.369 6.71-13.368-6.71-13.369 6.71-13.368-6.71-13.369 6.71-13.368-6.71-13.368 6.71-13.369-6.71-13.368 6.71-13.369-6.71L347.58 126l-13.368-6.71-13.369 6.71-13.368-6.71-13.369 6.71-13.368-6.71-13.369 6.71L254 119.29 240.632 126l-13.369-6.71-13.368 6.71-13.369-6.71-13.368 6.71-13.369-6.71-13.368 6.71-13.368-6.71-13.369 6.71-13.368-6.71-13.369 6.71-13.368-6.71L80.21 126l-13.369-6.71L53.474 126l-13.369-6.71L26.737 126l-13.369-6.71L0 126V0l13.368 6.681L26.737 0l13.368 6.681L53.474 0l13.368 6.681L80.211 0l13.368 6.681L106.947 0l13.369 6.681L133.684 0l13.369 6.681L160.42 0l13.368 6.681L187.158 0l13.368 6.681L213.895 0l13.368 6.681L240.632 0 254 6.681 267.368 0l13.369 6.681L294.105 0l13.369 6.681L320.842 0l13.369 6.681L347.579 0l13.368 6.681L374.316 0l13.368 6.681L401.053 0l13.368 6.681L427.79 0l13.369 6.681L454.526 0l13.369 6.681L481.263 0l13.369 6.681z" />
+
+                        </svg>
+
+                        <div style="height: 126px; position: absolute; top: 0; width: 508px;">
+
+                            <div style="max-width: 508px; color: #ffffff; display: table-cell; display: table-cell; height: 126px; text-align: center; vertical-align: middle; width: 508px;">
+
+                                СПАСИБО
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+        </td>
+
+    </tr>
+
+</table>
+
+
+                    </div>
+
+                        <script>
+                            document.getElementById("printButtonPDF").style.display = "block";
+                        </script>
+<form action="/v01/show" class="form" method="post" style="max-width: 350px;"><input id="ReceiptId" name="ReceiptId" type="hidden" value="00000000-0000-0000-0000-000000000000" /><input data-val="true" data-val-required="The Found field is required." id="Found" name="Found" type="hidden" value="True" /><input data-val="true" data-val-maxlength="Слишком длинная строка" data-val-maxlength-max="13" data-val-minlength="Слишком короткая строка" data-val-minlength-min="3" data-val-regex="Допустимы только цифры" data-val-regex-pattern="^\d+" data-val-required="Поле обязательно для заполнения" id="FiscalSign" name="FiscalSign" type="hidden" value="0000000000" /><input data-val="true" data-val-maxlength="Слишком длинная строка" data-val-maxlength-max="10" data-val-regex="Допустимы только цифры" data-val-regex-pattern="^\d+" id="DocumentFiscalNumber" name="DocumentFiscalNumber" type="hidden" value="00000" /><input data-val="true" data-val-date="The field ReceiptDate must be a date." data-val-required="The ReceiptDate field is required." id="ReceiptDate" name="ReceiptDate" type="hidden" value="17.02.2021 12:13:00" />                            <div class="form-group">
+                                <label for="email">Вы можете отправить чек на свой email:</label>
+                                <div class="row">
+                                    <input class="form-control-inline  col-xs-12 col-md-8 col-lg-8" id="email" maxlength="255" name="Email" placeholder="Адрес вашей электронной почты" style="margin-bottom: 10px;" type="text" value="" />
+                                    <div class="col-xs-12 col-md-4 col-lg-4">
+                                        <button type="submit" class="btn btn-default  btn-send-slip">
+                                            Отправить
+                                        </button>
+                                    </div>
+                                    <label style="color: red;"></label>
+                                </div>
+                            </div>
+</form><div class="receipt-notification">
+    <p>
+        Наличие чека в базе оператора фискальных данных подтверждает, что продавец при расчетах применил контрольно-кассовую технику в соответствии с требованиями Федерального закона от 22.05.2003 №54-ФЗ.
+    </p>
+    <p class="receipt-deltext">
+        Важно! Если у Вас есть вопросы по чеку, нажмите <a href="/v01/customerInfo?id=00000000-0000-0000-0000-000000000000" target="_blank">сюда</a>.
+    </p>
+</div>                        <div class="form" style="max-width: 350px;">
+                            <div class="form-group clearfix" style="margin-top: 60px">
+                                <div class="row">
+                                        <button onclick="location.href = '/'" class="btn btn-primary  col-xs-12 col-md-12 col-lg-12">
+                                            Проверить другой чек
+                                        </button>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+    </div>
+
+</div><!--/.grid-container-->
+
+<script src="/Scripts/ismobile.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function(e) {
+        if (isMobile()) document.documentElement.classList.add("mobile");
+    }, false);
+</script>
+
+
+            </div><!--/.wrapper-->
+        </div><!--/.main-->
+
+        <footer class="footer" id="footer_no_print">
+            <div class="wrapper">
+                <div class="grid-container justify-container">
+                    <div class="footer-cont-1 justify-item">
+                        <div class="footer-logo">
+                            <a href="http://taxcom.ru" target="_blank"><img src="/Content/Images/logo-taxcom-2.png" width="55" height="22" alt="Такском"></a>
+                        </div>
+                        <div class="colophon">
+                            <div class="copyright">2016 - 2021 © ООО «Такском»</div>
+                            <div class="version">Версия 1.1</div>
+                        </div>
+                    </div>
+                    <div class="footer-menu justify-item">
+                        <ul>
+                            <li class="hidden-xs"><a href="http://fwlink.taxcom.ru/ShowContents.aspx?ContentId=301" target="_blank">Вопросы о чеке</a></li>
+                            <li class="hidden-xs"><a href="http://fwlink.taxcom.ru/ShowContents.aspx?ContentId=300" target="_blank">Как подключиться</a></li>
+                            <li class="hidden-xs"><a href="http://fwlink.taxcom.ru/ShowContents.aspx?ContentId=299" target="_blank">Как стать партнером</a></li>
+                            <br>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script>
+            if ($('#about_serv').length == 0) {
+                $('#footer_no_print').hide();
+            }
+        </script>
+    </body>
+</html>
