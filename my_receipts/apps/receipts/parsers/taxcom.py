@@ -6,8 +6,13 @@ import requests
 
 from ..models import Receipt
 from .base import HTMLParser, Item
+from .errors import ParserError, ReceiptNotFound
 
 INT_REGEX = re.compile(r"\d+")
+
+
+class BadResponse(ParserError):
+    pass
 
 
 class TaxcomParser(HTMLParser):
@@ -17,6 +22,10 @@ class TaxcomParser(HTMLParser):
     def __init__(self, id):
         super(TaxcomParser, self).__init__()
         self.id = id
+
+    def check_soup(self, soup):
+        if self._soup.find("div", attrs={"class": "notfound"}):
+            raise ReceiptNotFound(f"Receipt with id '{self.id}' not found")
 
     def get_html(self):
         return requests.get(self.base_url, params={"id": self.id}).text

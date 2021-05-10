@@ -70,11 +70,15 @@ class HTMLParser:
     def get_receipt_sum(self) -> float:
         """Returns receipt sum"""
 
+    def check_soup(self, soup):
+        pass
+
     @property
     def soup(self):
         if self._soup is None:
             html = self.get_html()
             self._soup = BeautifulSoup(html, **self.bs_kwargs)
+            self.check_soup(self._soup)
         return self._soup
 
     def __getitem__(self, item):
