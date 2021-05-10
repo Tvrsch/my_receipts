@@ -22,3 +22,8 @@ class ShopAdmin(admin.ModelAdmin):
         if ordering:
             qs = qs.order_by(*ordering)
         return qs
+
+
+@admin.register(models.ReplaceAddressRule)
+class ReplaceAddressRuleAdmin(admin.ModelAdmin):
+    pass

@@ -1,9 +1,13 @@
 from datetime import datetime
 from pathlib import Path
 
+import pytest
+
 from my_receipts.apps.receipts.parsers import TaxcomParser
 
 CURRENT_DIR = Path(__file__).resolve(strict=True).parent
+
+pytestmark = pytest.mark.django_db
 
 
 def test_taxcom(requests_mock):

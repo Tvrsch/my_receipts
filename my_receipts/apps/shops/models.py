@@ -27,3 +27,24 @@ class Shop(SoftDeletableModel):
     @property
     def receipts_count(self):
         return self.receipts.count()
+
+    @staticmethod
+    def prepare_address(address):
+        if address:
+            for old_text, new_text in ReplaceAddressRule.objects.values_list(
+                "old_text", "new_text"
+            ):
+                address = address.replace(old_text, new_text)
+        return address.strip()
+
+
+class ReplaceAddressRule(models.Model):
+    old_text = models.CharField(_("Old text"), max_length=128, unique=True)
+    new_text = models.CharField(_("New text"), max_length=128, blank=True)
+
+    class Meta:
+        verbose_name = _("Replace address rule")
+        verbose_name_plural = _("Replace address rules")
+
+    def __str__(self):
+        return f"{self.old_text!r} -> {self.new_text!r}"

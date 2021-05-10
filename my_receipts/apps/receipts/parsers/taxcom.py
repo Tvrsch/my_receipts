@@ -4,6 +4,8 @@ from typing import List
 
 import requests
 
+from my_receipts.apps.shops.models import Shop
+
 from ..models import Receipt
 from .base import HTMLParser, Item
 from .errors import ParserError, ReceiptNotFound
@@ -44,7 +46,7 @@ class TaxcomParser(HTMLParser):
 
     def get_shop_address(self):
         shop_address = self.soup.find("span", attrs={"class": "receipt-value-1009"})
-        return shop_address.text.strip()
+        return Shop.prepare_address(shop_address.text)
 
     def get_terminal_number(self) -> int:
         terminal_number = self.soup.find(
