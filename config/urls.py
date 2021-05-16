@@ -4,6 +4,15 @@ from django.contrib import admin
 from django.urls import include, path
 from django.views import defaults as default_views
 from django.views.generic import TemplateView
+from drf_yasg import openapi
+from drf_yasg.views import get_schema_view
+
+schema_view = get_schema_view(
+    openapi.Info(
+        title="API Docs",
+        default_version="v1",
+    )
+)
 
 urlpatterns = [
     path("", TemplateView.as_view(template_name="pages/home.html"), name="home"),
@@ -18,6 +27,17 @@ urlpatterns = [
     # Your stuff: custom urls includes go here
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
+# API URLS
+urlpatterns += [
+    path("api/auth/", include("dj_rest_auth.urls")),  # Auth
+    path(
+        "api/registration/", include("dj_rest_auth.registration.urls")
+    ),  # Registration
+    path("api/v1/", include("config.api_routers.v1")),  # API v1
+    path(
+        "api/docs/", schema_view.with_ui("swagger", cache_timeout=0), name="api_docs"
+    ),  # Docs
+]
 
 if settings.DEBUG:
     # This allows the error pages to be debugged during development, just visit
