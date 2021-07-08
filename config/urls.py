@@ -1,7 +1,8 @@
+from allauth.account.views import confirm_email as confirm_email_view
 from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
-from django.urls import include, path
+from django.urls import include, path, re_path
 from django.views import defaults as default_views
 from django.views.generic import TemplateView
 from drf_yasg import openapi
@@ -30,6 +31,11 @@ urlpatterns = [
 # API URLS
 urlpatterns += [
     path("api/auth/", include("dj_rest_auth.urls")),  # Auth
+    re_path(
+        r"api/registration/account-confirm-email/(?P<key>[-:\w]+)/$",
+        confirm_email_view,
+        name="account_confirm_email",
+    ),  # Email confirmation
     path(
         "api/registration/", include("dj_rest_auth.registration.urls")
     ),  # Registration
