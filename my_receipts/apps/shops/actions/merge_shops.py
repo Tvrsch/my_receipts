@@ -7,7 +7,6 @@ from django.shortcuts import render
 
 
 def merge_shops(modeladmin, request, queryset):
-    print(request.POST)
     """Merge two shops with similar addresses"""
     if request.POST.get("merge_shops"):
         count = queryset.count()
