@@ -1,3 +1,3 @@
-from .merge_shops import merge_shops
+from .merge_shops import MergeShops
 
-__all__ = ["merge_shops"]
+__all__ = ["MergeShops"]

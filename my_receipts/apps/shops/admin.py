@@ -10,7 +10,7 @@ class ShopAdmin(admin.ModelAdmin):
         "name",
         "is_removed",
     )
-    actions = (actions.merge_shops,)
+    actions = (actions.MergeShops.request_handler,)
 
     def get_queryset(self, request):
         """
