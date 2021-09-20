@@ -19,8 +19,8 @@
 {% endblock %}
 
 {% block content %}
-    <p>{{ slave }} ({{ slave.address }}) will be merged into {{ master }} ({{ master.address }})</p>
-    <p>{{ slave_receipts }} receipts will be assigned to {{ master }}</p>
+  <p><b>{{ slave }}</b> (<b>{{ slave.address }}</b>) will be merged into <b>{{ master }}</b> (<b>{{ master.address }}</b>)</p>
+  <p><b>{{ slave_receipts }}</b> receipts will be assigned to <b>{{ master }}</b></p>
     <form method="post">{% csrf_token %}
     <div>
     {% for obj in queryset %}
