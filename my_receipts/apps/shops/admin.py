@@ -1,5 +1,6 @@
 from django.contrib import admin
 
+
 from . import actions, models
 
 
@@ -10,7 +11,7 @@ class ShopAdmin(admin.ModelAdmin):
         "name",
         "is_removed",
     )
-    actions = (actions.MergeShops.request_handler,)
+    actions = (actions.merge_shops,)
 
     def get_queryset(self, request):
         """

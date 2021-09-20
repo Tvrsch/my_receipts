@@ -23,7 +23,10 @@
     <p>{{ slave_receipts }} receipts will be assigned to {{ master }}</p>
     <form method="post">{% csrf_token %}
     <div>
-    <input type="hidden" name="action" value="MergeShops.request_handler">
+    {% for obj in queryset %}
+    <input type="hidden" name="{{ action_checkbox_name }}" value="{{ obj.pk|unlocalize }}">
+    {% endfor %}
+    <input type="hidden" name="action" value="merge_shops">
     <input type="hidden" name="merge_shops" value="yes">
     <input type="submit" value="{% translate 'Yes, I’m sure' %}">
     <a href="#" class="button cancel-link">{% translate "No, take me back" %}</a>
